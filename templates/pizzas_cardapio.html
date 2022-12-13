@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-4">
+						<h3>Cardápio</h3>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+    <div class="card-group">
+      {% for p in pizzas %}
+      <div class="card mb-3" style="max-width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='imgs/'+p.imagem)}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{p.sabor}}</h5>
+          <p class="card-text">{{p.ingredientes}} This content is a little bit longer.</p>
+          <button type="button" class="btn btn-light">
+            <a href="{{url_for('pedidos.create', id = p.id)}}" type="submit"><p class="card-text"><small class="text-muted">Pedir Pizza</small></p></a>
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+{% endblock %}

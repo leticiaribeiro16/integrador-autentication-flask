@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h3>Adicionar <b>Pizza</b></h3>
+
+    <form method='post' action='/pizzas/create'>
+      <div class="form-group">
+      <label>Sabor:</label> <input type="text" name="sabor" class="form-control"><br>
+      </div>
+      <div class="form-group">
+      <label>Imagem: </label><input type="text" name="imagem" class="form-control"><br>
+      </div>
+      <div class="form-group">
+      <label>Ingredientes: </label><input type="text" name="ingredientes" class="form-control"><br>
+      </div>
+      <div class="form-group">
+      <label>Preço: </label><input type="text" name="preco" class="form-control"><br>
+      </div>
+      <br>
+      <input type="submit" value="Cadastrar" class="btn btn-primary">
+    </form>
+{% endblock %}

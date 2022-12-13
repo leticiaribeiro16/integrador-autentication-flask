@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>SQLite Viewer </title>
+</head>  
+<body>
+    <div id='sqlite-viewer'></div>
+  
+  <script type="module">
+    import SqliteView from 'https://unpkg.com/sqlite-view/sqlite-view.module.bundled.js';
+    const viewer = new SqliteView('sqlite-viewer');
+    viewer.load("{{url_for('static', filename='meubanco.sqlite')}}");
+  </script>
+
+  </body>
+</html>

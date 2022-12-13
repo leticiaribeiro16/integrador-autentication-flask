@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h3>Atualizar <b>Pizza</b></h3>
+
+    <form method='post' action='/pizzas/update/{{p.id}}'>
+      <div class="form-group">
+      Sabor: <input type="text" name="sabor" value="{{p.sabor}}" class="form-control"><br>
+      </div>
+      
+      <div class="form-group">
+      Imagem: <input type="text" name="imagem" value="{{p.imagem}}" class="form-control"><br>
+      </div>
+
+      <div class="form-group">
+      Ingredientes: <input type="text" name="ingredientes" value="{{p.ingredientes}}" class="form-control"><br>
+      <div>
+
+      <div class="form-group">
+      Preço: <input type="text" name="preco" value="{{p.preco}}" class="form-control"><br>
+      </div>
+        <br>
+      <input type="submit" value="Atualizar" class="btn btn-primary">
+    </form>
+{% endblock %}

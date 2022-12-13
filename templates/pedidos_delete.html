@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+		<h3>Excluir <b>Pedido</b></h3>
+
+    Você tem certeza que deseja excluir o pedido do usuário {{p.usuario.nome}} do sabor {{p.pizza.sabor}}?
+    <form method='post' action="{{url_for('pedidos.delete', id=p.id)}}">
+      <input type="submit" value="Sim" class="btn btn-primary">
+      <a href="{{url_for('pedidos.recovery')}}" class="btn btn-primary">Cancelar</a>
+    </form>
+      
+  </body>
+</html>
+
+{% endblock %}

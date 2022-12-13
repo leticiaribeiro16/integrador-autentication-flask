@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h3>Excluir <b>Usuário</b></h3>
+
+    Você tem certeza que deseja excluir o usuário {{u.nome}}?
+    <form method='post' action="{{url_for('usuarios.delete', id=u.id)}}"'>
+      <input type="submit" value="Sim" class="btn btn-primary">
+      <a href='/usuarios/recovery' class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock %}
